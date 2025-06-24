@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #e4ded7;
+  border-radius: 2px;
+}
+.dark .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+:root {
+  --color-bg: #000000;
+  --color-bg-secondary: #232329;
+  --color-text: #e4ded7;
+  --color-accent: #6366f1;
+  --color-card: #232329;
+
+  --color-bg-opposite: #ffffff;
+  --color-text-opposite: #000000;
+}
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #fff;
+  --color-text: #000000;
+  --color-accent: #6366f1;
+  --color-card: #fff;
+
+  --color-bg-opposite: #000000;
+  --color-text-opposite: #e4ded7;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
+}
+.bg-main {
+  background: var(--color-bg);
+}
+.bg-opposite {
+  background: var(--color-bg-opposite);
+}
+.bg-secondary {
+  background: var(--color-bg-secondary);
+}
+.text-main {
+  color: var(--color-text);
+}
+.text-opposite {
+  color: var(--color-text-opposite);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.card {
+  background: var(--color-card);
+  transition: background 0.3s;
+}
