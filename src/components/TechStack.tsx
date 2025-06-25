@@ -97,7 +97,7 @@ const TechStack: React.FC = () => {
 
         <div className="px-8 overflow-hidden">
           <div
-            className={`flex space-x-16 animate-seamless-marquee ${
+            className={`flex space-x-2 animate-seamless-marquee ${
               isHovered ? "paused" : ""
             }`}
             onMouseEnter={() => setIsHovered(true)}
@@ -109,7 +109,7 @@ const TechStack: React.FC = () => {
             {duplicatedStack.map((tech, index) => (
               <div
                 key={`${tech.name}-${index}`}
-                className="flex flex-col items-center justify-center min-w-[120px] p-6 transition-transform duration-500 ease-in-out hover:scale-110 group cursor-pointer"
+                className="flex flex-col items-center justify-center min-w-[120px] p-6 transition-transform duration-700 ease-in-out hover:scale-130 group cursor-pointer"
               >
                 <div className="w-25 h-25 mb-4 flex items-center justify-center">
                   <img
