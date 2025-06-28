@@ -83,19 +83,38 @@ const TechStack: React.FC = () => {
           .paused {
             animation-play-state: paused !important;
           }
+
+          .fade-overlay-left {
+            background: linear-gradient(90deg, var(--color-bg) 0%, rgba(var(--color-bg-rgb), 0) 100%);
+          }
+
+          .fade-overlay-right {
+            background: linear-gradient(270deg, var(--color-bg) 0%, rgba(var(--color-bg-rgb), 0) 100%);
+          }
+
+          [data-theme="light"] .fade-overlay-left,
+          [data-theme="light"] .fade-overlay-right {
+            --color-bg-rgb: 255, 255, 255;
+          }
+
+          [data-theme="dark"] .fade-overlay-left,
+          [data-theme="dark"] .fade-overlay-right {
+            --color-bg-rgb: 0, 0, 0;
+          }
         `}
       </style>
 
-      <div className="w-full py-16 overflow-hidden bg-main relative">
+      <div className="w-full px-12 md:px-42 py-16 overflow-hidden bg-main relative">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-main">Tools</h1>
         </div>
 
-        {/* adjust width for margin */}
-        <div className="hidden md:block absolute left-0 top-0 h-full w-48 bg-main z-10 pointer-events-none" />
-        <div className="hidden md:block absolute right-0 top-0 h-full w-48 bg-main z-10 pointer-events-none" />
+        <div className="px-8 overflow-hidden relative">
+          {/* Left fade overlay */}
+          <div className="fade-overlay-left absolute left-0 top-0 bottom-0 w-12 md:w-32 z-10 pointer-events-none"></div>
 
-        <div className="px-8 overflow-hidden">
+          {/* Right fade overlay */}
+          <div className="fade-overlay-right absolute right-0 top-0 bottom-0 w-12 md:w-32 z-10 pointer-events-none"></div>
           <div
             className={`flex space-x-2 animate-seamless-marquee ${
               isHovered ? "paused" : ""
@@ -111,7 +130,7 @@ const TechStack: React.FC = () => {
                 key={`${tech.name}-${index}`}
                 className="flex flex-col items-center justify-center min-w-[120px] p-6 transition-transform duration-700 ease-in-out hover:scale-130 group cursor-pointer"
               >
-                <div className="w-25 h-25 mb-4 flex items-center justify-center">
+                <div className="md:w-25 md:h-25 mb-4 flex items-center justify-center">
                   <img
                     src={tech.logo}
                     alt={`${tech.name} logo`}

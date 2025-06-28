@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Contact: React.FC = () => {
+  const [showArrow, setShowArrow] = useState(false);
+  const contactRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+    function checkVisibility() {
+      const contact = contactRef.current;
+      if (!contact) return;
+      const rect = contact.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (inView) {
+        if (!timeoutId) {
+          timeoutId = setTimeout(() => setShowArrow(true), 1500);
+        }
+      } else {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+          timeoutId = null;
+        }
+        setShowArrow(false);
+      }
+    }
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+    checkVisibility();
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
   return (
     <section
       id="contact"
+      ref={contactRef}
       className="bg-main text-main py-28 relative overflow-hidden"
     >
       <motion.div
@@ -74,10 +106,44 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="font-bold underline hover:text-accent"
           >
-            SANKALP JAISWAL
+            Jayrald Bernales
           </a>
         </p>
       </footer>
+      {/* Floating Arrow Up Button (only visible when Contact is in view) */}
+      {showArrow && (
+        <motion.button
+          type="button"
+          aria-label="Back to top"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          onClick={() => {
+            const top = document.getElementById("home");
+            if (top) {
+              top.scrollIntoView({ behavior: "smooth" });
+            } else {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="fixed left-1/2 -translate-x-1/2 bottom-8 bg-main border border-neutral-800 rounded-full p-2 shadow-lg hover:bg-accent/20 transition-colors duration-300 flex items-center justify-center z-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-7 h-7 text-main"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 15l7-7 7 7"
+            />
+          </svg>
+        </motion.button>
+      )}
     </section>
   );
 };

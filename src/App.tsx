@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -29,8 +29,8 @@ const App: React.FC = () => {
             <Navbar />
             <main>
               <Hero />
-              <TechStack />
               <About />
+              <TechStack />
               <Projects />
               <Contact />
             </main>

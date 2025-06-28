@@ -17,19 +17,19 @@
 
 :root {
   --color-bg: #000000;
-  --color-bg-secondary: #232329;
+  --color-bg-secondary: #cbd5e1;
   --color-text: #e4ded7;
-  --color-accent: #6366f1;
+  --color-accent: #f57662;
   --color-card: #232329;
 
-  --color-bg-opposite: #ffffff;
+  --color-bg-opposite: #e4ded7;
   --color-text-opposite: #000000;
 }
 [data-theme="light"] {
   --color-bg: #ffffff;
   --color-bg-secondary: #fff;
   --color-text: #000000;
-  --color-accent: #6366f1;
+  --color-accent: #f57662;
   --color-card: #fff;
 
   --color-bg-opposite: #000000;
@@ -43,6 +43,9 @@ body {
 }
 .bg-main {
   background: var(--color-bg);
+}
+.bg-accent {
+  background: var(--color-accent);
 }
 .bg-opposite {
   background: var(--color-bg-opposite);

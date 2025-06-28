@@ -458,7 +458,7 @@ const ChatWidget: React.FC = () => {
       {!open && (
         <button
           onClick={toggleChat}
-          className="relative w-16 h-16 rounded-full bg-opposite flex items-center justify-center shadow-lg hover:bg-neutral-600 hover:shadow-xl hover:scale-110 transition-all duration-300"
+          className="relative w-16 h-16 rounded-full shadow-lg bg-opposite flex items-center justify-center shadow-lg hover:bg-neutral-600 hover:shadow-xl hover:scale-110 transition-all duration-300"
           aria-label="Open chat"
         >
           <MessageCircleMore size={28} className="text-opposite" />

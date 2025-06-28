@@ -3,23 +3,34 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  // Smooth scroll handler
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setOpen(false);
+  };
+
   return (
     <nav className="w-full fixed top-0 left-0 z-40 bg-main backdrop-blur">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-        {/* Left: Logo - stays on the left */}
-        <div className="text-2xl font-extrabold relative font-sans">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-12 md:px-24 py-4 md:py-10">
+        <div className="text-3xl font-extrabold relative font-sans">
           <span className="text-main">JB.</span>
-          <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-pink-500 block rounded-sm" />
+          <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-accent block rounded-sm" />
         </div>
 
-        {/* Right-aligned navigation container */}
         <div className="flex items-center gap-8">
-          {/* Center: Nav Links - moved to right side */}
-          <ul className="hidden md:flex gap-8 text-sm font-medium">
+          <ul className="hidden md:flex gap-4 text-md font-medium">
             <li>
               <a
                 href="#home"
-                className="hover:text-main transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                className="transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                onClick={(e) => handleSmoothScroll(e, "home")}
               >
                 Home
               </a>
@@ -27,7 +38,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#about"
-                className="hover:text-main transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                className="transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                onClick={(e) => handleSmoothScroll(e, "about")}
               >
                 About
               </a>
@@ -35,7 +47,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#projects"
-                className="hover:text-main transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                className="transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                onClick={(e) => handleSmoothScroll(e, "projects")}
               >
                 Projects
               </a>
@@ -43,7 +56,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#contact"
-                className="hover:text-main transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                className="transition font-sans text-main px-2 py-1 hover:bg-white/10 rounded-md"
+                onClick={(e) => handleSmoothScroll(e, "contact")}
               >
                 Contact
               </a>
@@ -81,12 +95,12 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-main border-t border-neutral-800 px-6 py-4 animate-fade-in-up">
-          <ul className="flex flex-col gap-4 text-white font-sans">
+          <ul className="flex flex-col gap-4 text-main font-sans">
             <li>
               <a
                 href="#home"
                 className="block py-2 px-3 hover:bg-white/10 rounded-md transition"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, "home")}
               >
                 Home
               </a>
@@ -95,7 +109,7 @@ const Navbar: React.FC = () => {
               <a
                 href="#about"
                 className="block py-2 px-3 hover:bg-white/10 rounded-md transition"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, "about")}
               >
                 About
               </a>
@@ -104,7 +118,7 @@ const Navbar: React.FC = () => {
               <a
                 href="#projects"
                 className="block py-2 px-3 hover:bg-white/10 rounded-md transition"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, "projects")}
               >
                 Projects
               </a>
@@ -113,15 +127,10 @@ const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 className="block py-2 px-3 hover:bg-white/10 rounded-md transition"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, "contact")}
               >
                 Contact
               </a>
-            </li>
-            <li>
-              <div className="block py-2 px-3">
-                <ThemeToggle />
-              </div>
             </li>
           </ul>
         </div>
