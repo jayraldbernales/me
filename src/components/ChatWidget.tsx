@@ -15,7 +15,6 @@ const ChatWidget: React.FC = () => {
   const [minimized, setMinimized] = useState(false);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [conversationContext, setConversationContext] = useState<string[]>([]);
   const [userName, setUserName] = useState<string>(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("chatUserName") || "";
@@ -272,9 +271,6 @@ const ChatWidget: React.FC = () => {
       timestamp: new Date(),
     };
 
-    // Add to conversation context
-    setConversationContext((prev) => [...prev.slice(-4), input.trim()]);
-
     setMessages((msgs) => [...msgs, userMessage]);
     const currentInput = input.trim();
     setInput("");
@@ -458,7 +454,7 @@ const ChatWidget: React.FC = () => {
       {!open && (
         <button
           onClick={toggleChat}
-          className="relative w-16 h-16 rounded-full shadow-lg bg-opposite flex items-center justify-center shadow-lg hover:bg-neutral-600 hover:shadow-xl hover:scale-110 transition-all duration-300"
+          className="relative w-16 h-16 rounded-full shadow-lg bg-opposite flex items-center justify-center hover:bg-neutral-600 hover:shadow-xl hover:scale-110 transition-all duration-300"
           aria-label="Open chat"
         >
           <MessageCircleMore size={28} className="text-opposite" />

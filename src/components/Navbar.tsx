@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { AlignRight } from "lucide-react";
+import "../App";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
-  // Smooth scroll handler
+
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
     id: string
@@ -17,9 +19,9 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-40 bg-main backdrop-blur">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-12 md:px-24 py-4 md:py-10">
-        <div className="text-3xl font-extrabold relative font-sans">
+    <nav className="w-full bg-transparent z-40 absolute top-0">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-24 py-4 md:py-10">
+        <div className="text-3xl font-extrabold relative blinker-bold">
           <span className="text-main">JB.</span>
           <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-accent block rounded-sm" />
         </div>
@@ -72,26 +74,11 @@ const Navbar: React.FC = () => {
               onClick={() => setOpen((v) => !v)}
               aria-label="Open navigation menu"
             >
-              <svg
-                width="28"
-                height="28"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="text-main"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <AlignRight className="w-7 h-7 text-main" />
             </button>
           </div>
         </div>
       </div>
-
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-main border-t border-neutral-800 px-6 py-4 animate-fade-in-up">

@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       ref={contactRef}
-      className="bg-main text-main py-28 relative overflow-hidden"
+      className="bg-black text-[#e4ded7] pt-28 relative overflow-hidden"
     >
       <motion.div
         className="text-center px-6"
@@ -47,56 +47,60 @@ const Contact: React.FC = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-[16vw] md:text-[12vw] font-extrabold text-main leading-none tracking-tighter font-sans uppercase">
-          LET’S TALK
-        </h1>
+        <img
+          src="/src/assets/talk.png"
+          alt="LET’S TALK"
+          className="w-full md:h-[450px] object-contain object-center"
+        />
 
-        <div className="mt-10 text-sm md:text-base font-semibold max-w-md mx-auto">
-          <p className="uppercase">
-            Got a question, proposal, project, or want to work together on
-            something?
-          </p>
-          <a
-            href="mailto:your-email@example.com"
-            className="block mt-2 underline hover:text-accent transition duration-300"
-          >
-            Send me an email
-          </a>
-        </div>
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base px-6 md:px-33">
+          <div className="blinker-bold font-semibold text-center md:text-left max-w-md">
+            <p className="uppercase">
+              Got a question, proposal, project, or want to work together on
+              something?
+            </p>
+            <a
+              href="mailto:your-email@example.com"
+              className="block mt-2 underline hover:text-accent transition duration-300"
+            >
+              Send me an email
+            </a>
+          </div>
 
-        <div className="mt-10 flex justify-center gap-8 text-main">
-          <a
-            href="https://github.com/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github className="w-5 h-5 hover:text-accent transition" />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin className="w-5 h-5 hover:text-accent transition" />
-          </a>
-          <a
-            href="https://x.com/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twitter className="w-5 h-5 hover:text-accent transition" />
-          </a>
-          <a
-            href="https://instagram.com/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram className="w-5 h-5 hover:text-accent transition" />
-          </a>
+          <div className="flex gap-6 text-[#e4ded7]">
+            <a
+              href="https://github.com/yourhandle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-5 h-5 hover:text-accent transition" />
+            </a>
+            <a
+              href="https://linkedin.com/in/yourhandle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="w-5 h-5 hover:text-accent transition" />
+            </a>
+            <a
+              href="https://x.com/yourhandle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter className="w-5 h-5 hover:text-accent transition" />
+            </a>
+            <a
+              href="https://instagram.com/yourhandle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-5 h-5 hover:text-accent transition" />
+            </a>
+          </div>
         </div>
       </motion.div>
 
-      <footer className="mt-20 border-t border-neutral-800 pt-6 flex justify-between items-center text-xs px-6">
+      <footer className="mt-10 border-t blinker-bold border-neutral-800 py-8 flex justify-between items-center text-xs px-6 md:px-43">
         <p>COPYRIGHT 2025</p>
         <p>
           DESIGN & DEVELOPMENT BY{" "}
@@ -126,7 +130,7 @@ const Contact: React.FC = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
-          className="fixed left-1/2 -translate-x-1/2 bottom-8 bg-main border border-neutral-800 rounded-full p-2 shadow-lg hover:bg-accent/20 transition-colors duration-300 flex items-center justify-center z-50"
+          className="fixed left-1/2 -translate-x-1/2 bottom-4 bg-white border border-neutral-800 rounded-full p-2 shadow-lg hover:bg-accent/20 transition-colors duration-300 flex items-center justify-center z-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +138,7 @@ const Contact: React.FC = () => {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-7 h-7 text-main"
+            className="w-7 h-7 text-black"
           >
             <path
               strokeLinecap="round"

@@ -26,14 +26,16 @@ const App: React.FC = () => {
           <Loader />
         ) : (
           <>
-            <Navbar />
-            <main>
-              <Hero />
-              <About />
-              <TechStack />
-              <Projects />
-              <Contact />
-            </main>
+            <div className="min-h-screen flex flex-col">
+              <Navbar />
+              <main className="flex-1">
+                <Hero />
+                <About />
+                <TechStack />
+                <Projects />
+                <Contact />
+              </main>
+            </div>
             <ChatWidget />
           </>
         )}
