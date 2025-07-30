@@ -47,38 +47,38 @@ const Hero: React.FC = () => {
               <FileText className="w-5 h-5" />
             </a>
 
-            <div className="flex items-center gap-3 mt-2 sm:mt-0">
+            <div className="flex items-center gap-3 mt-2 sm:mt-0 relative z-10">
               <a
                 href="https://www.linkedin.com/in/jayrald-bernales-19a8bb346/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="rounded-full p-2 hover:bg-main/10 transition focus:outline-none"
+                className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                <Linkedin className="w-6 h-6 text-main" />
+                <Linkedin className="w-6 h-6" />
               </a>
+
               <a
                 href="https://github.com/jayraldbernales/"
                 target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="rounded-full p-2 hover:bg-main/10 transition focus:outline-none"
+                className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                <Github className="w-6 h-6 text-main" />
+                <Github className="w-6 h-6" />
               </a>
+
               <a
                 href="mailto:jayraldbernales01@gmail.com"
                 aria-label="Email"
-                className="rounded-full p-2 hover:bg-main/10 transition focus:outline-none"
+                className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                <Mail className="w-6 h-6 text-main" />
+                <Mail className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
         </div>
-        <div className="hidden md:block ml-20 md:ml-0 md:w-[45vw] h-[5vh] md:h-[90vh] mt-20 md:mt-20 md:max-w-[700px]">
+        <div className="hidden md:block ml-20 md:ml-0 md:w-[45vw] h-[5vh] md:h-[90vh] md:max-w-[700px]">
           <Spline
-            className="absolute xl:right-[-28%] scale-250 md:scale-100 right-[-20%] top-0"
+            className="absolute xl:right-[-28%] scale-25 md:scale-100 right-[-20%] md:top-13 top-0"
             scene="https://prod.spline.design/O6lOa1Mwds3cPphR/scene.splinecode"
           />
         </div>
