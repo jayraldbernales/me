@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
         viewport={{ once: true }}
       >
         <img
-          src="/src/assets/talk.png"
+          src="/me/talk.png"
           alt="LET’S TALK"
           className="w-full md:h-[450px] object-contain object-center"
         />
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               something?
             </p>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:jayraldbernales01@gmail.com"
               className="block mt-2 underline hover:text-accent transition duration-300"
             >
               Send me an email
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
 
           <div className="flex gap-6 text-[#e4ded7]">
             <a
-              href="https://github.com/yourhandle"
+              href="https://github.com/jayraldbernales"
               target="_blank"
               rel="noopener noreferrer"
             >

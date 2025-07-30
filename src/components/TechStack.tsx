@@ -26,7 +26,7 @@ const TechStack: React.FC = () => {
     },
     {
       name: "Express",
-      logo: "/src/assets/express.png",
+      logo: "/me/express.png",
       color: "#000000",
     },
     {
@@ -41,7 +41,7 @@ const TechStack: React.FC = () => {
     },
     {
       name: "Laravel",
-      logo: "/src/assets/laravel-2.svg",
+      logo: "/me/laravel-2.svg",
       color: "#FF2D20",
     },
     {
@@ -51,7 +51,7 @@ const TechStack: React.FC = () => {
     },
     {
       name: "Tailwind CSS",
-      logo: "/src/assets/tailwindcss.svg",
+      logo: "/me/tailwindcss.svg",
       color: "#06B6D4",
     },
     {
