@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                 <Github className="w-6 h-6 text-main" />
               </a>
               <a
-                href="mailto:bernalesj28@gmail.com"
+                href="mailto:jayraldbernales01@gmail.com"
                 aria-label="Email"
                 className="rounded-full p-2 hover:bg-main/10 transition focus:outline-none"
               >
@@ -76,9 +76,9 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
         </div>
-        <div className="ml-20 md:ml-0 md:w-[45vw] h-[50vh] md:h-[90vh] md:mt-20 max-w-[700px]">
+        <div className="hidden md:block ml-20 md:ml-0 md:w-[45vw] h-[5vh] md:h-[90vh] mt-20 md:mt-20 md:max-w-[700px]">
           <Spline
-            className="absolute xl:right-[-28%] scale-45 md:scale-100 right-[-20%] md:right-0"
+            className="absolute xl:right-[-28%] scale-250 md:scale-100 right-[-20%] top-0"
             scene="https://prod.spline.design/O6lOa1Mwds3cPphR/scene.splinecode"
           />
         </div>
