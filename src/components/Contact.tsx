@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Contact: React.FC = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -50,10 +50,10 @@ const Contact: React.FC = () => {
         <img
           src="/me/talk.png"
           alt="LET’S TALK"
-          className="w-full md:h-[450px] object-contain object-center"
+          className="w-full h-[200px] md:h-[450px] object-contain object-center"
         />
 
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base px-6 md:px-33">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base px-6 md:px-22">
           <div className="blinker-bold font-semibold text-center md:text-left max-w-md">
             <p className="uppercase">
               Got a question, proposal, project, or want to work together on
@@ -76,21 +76,21 @@ const Contact: React.FC = () => {
               <Github className="w-5 h-5 hover:text-accent transition" />
             </a>
             <a
-              href="https://linkedin.com/in/yourhandle"
+              href="https://www.linkedin.com/in/jayrald-bernales-19a8bb346/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5 hover:text-accent transition" />
             </a>
             <a
-              href="https://x.com/yourhandle"
+              href="https://www.facebook.com/jayrald.bernales.3/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="w-5 h-5 hover:text-accent transition" />
+              <Facebook className="w-5 h-5 hover:text-accent transition" />
             </a>
             <a
-              href="https://instagram.com/yourhandle"
+              href="https://www.instagram.com/jayraalddd/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -100,19 +100,9 @@ const Contact: React.FC = () => {
         </div>
       </motion.div>
 
-      <footer className="mt-10 border-t blinker-bold border-neutral-800 py-8 flex justify-between items-center text-xs px-6 md:px-43">
+      <footer className="mt-10 border-t blinker-bold border-neutral-800 py-8 flex justify-between items-center text-xs px-6 md:px-27">
         <p>COPYRIGHT 2025</p>
-        <p>
-          DESIGN & DEVELOPMENT BY{" "}
-          <a
-            href="https://sankalp-jaiswal-portfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold underline hover:text-accent"
-          >
-            Jayrald Bernales
-          </a>
-        </p>
+        <p>All rights reserved.</p>
       </footer>
       {/* Floating Arrow Up Button (only visible when Contact is in view) */}
       {showArrow && (

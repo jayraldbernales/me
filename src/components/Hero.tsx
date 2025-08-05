@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <div className="relative">
       <section
         id="home"
-        className="min-h-[100vh] flex flex-col-reverse md:flex-row justify-center items-center md:items-stretch text-center md:text-left pb-12 md:pb-0 md:pl-32 lg:pl-52 relative overflow-hidden bg-main"
+        className="min-h-[100vh] flex flex-col-reverse top-20 md:top-0 md:flex-row justify-center items-center md:items-stretch text-center md:text-left pb-12 md:pb-0 md:pl-32 lg:pl-52 relative overflow-hidden bg-main"
       >
         <div className="flex-1 flex flex-col justify-center items-center md:items-start mb-12 md:mb-0">
           <motion.h1
