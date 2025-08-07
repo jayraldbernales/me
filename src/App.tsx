@@ -3,6 +3,7 @@ import Loader from "./components/Loader";
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Hero = lazy(() => import("./components/Hero"));
+const Education = lazy(() => import("./components/Education"));
 const TechStack = lazy(() => import("./components/TechStack"));
 const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
@@ -32,6 +33,7 @@ const App: React.FC = () => {
                 <Hero />
                 <About />
                 <TechStack />
+                <Education />
                 <Projects />
                 <Contact />
               </main>

@@ -29,6 +29,7 @@ const ThemeToggle: React.FC = () => {
       stroke="none"
       initial={{ scale: 0.3, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
+      whileHover={{ scale: 1.1, rotate: 10 }}
       transition={{
         duration: 0.15,
         ease: "easeOut",
@@ -49,6 +50,7 @@ const ThemeToggle: React.FC = () => {
       stroke="none"
       initial={{ scale: 0.3, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
+      whileHover={{ scale: 1.1, rotate: 20 }}
       transition={{
         duration: 0.15,
         ease: "easeOut",
@@ -137,9 +139,9 @@ const ThemeToggle: React.FC = () => {
       aria-label="Toggle theme"
       onClick={toggleTheme}
       className="text-main"
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.1 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <AnimatePresence mode="popLayout">
         <motion.div
@@ -152,6 +154,7 @@ const ThemeToggle: React.FC = () => {
             duration: 0.1,
             ease: "easeInOut",
           }}
+          whileHover={{ scale: 1.05 }}
         >
           {theme === "dark" ? <SunIcon /> : <MoonIcon />}
         </motion.div>

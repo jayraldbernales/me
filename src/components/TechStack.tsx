@@ -61,7 +61,7 @@ const TechStack: React.FC = () => {
     },
   ];
 
-  const duplicatedStack = [...techStack, ...techStack, ...techStack];
+  const duplicatedStack = [...techStack, ...techStack];
 
   return (
     <>
@@ -72,7 +72,7 @@ const TechStack: React.FC = () => {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(calc(-100% / 3));
+              transform: translateX(calc(-100% / 2));
             }
           }
           
@@ -130,7 +130,7 @@ const TechStack: React.FC = () => {
                 key={`${tech.name}-${index}`}
                 className="flex flex-col items-center justify-center min-w-[120px] p-6 transition-transform duration-700 ease-in-out hover:scale-130 group cursor-pointer"
               >
-                <div className="md:w-25 md:h-25 mb-4 flex items-center justify-center">
+                <div className="md:w-20 md:h-25 mb-4 flex items-center justify-center">
                   <img
                     src={tech.logo}
                     alt={`${tech.name} logo`}

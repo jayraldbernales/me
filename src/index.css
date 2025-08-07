@@ -19,6 +19,7 @@
   --color-bg: #000000;
   --color-bg-secondary: #cbd5e1;
   --color-text: #e4ded7;
+  --color-border: #e4ded7;
   --color-accent: #f57662;
   --color-card: #232329;
 
@@ -29,6 +30,7 @@
   --color-bg: #ffffff;
   --color-bg-secondary: #fff;
   --color-text: #000000;
+  --color-border: #000000;
   --color-accent: #f57662;
   --color-card: #fff;
 
@@ -57,6 +59,11 @@ body {
 .text-main {
   color: var(--color-text);
 }
+
+.border-main {
+  color: var(--color-border);
+}
+
 .text-opposite {
   color: var(--color-text-opposite);
 }

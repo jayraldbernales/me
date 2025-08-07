@@ -18,18 +18,17 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            HI, I'M JAYRALD
+            HI, I'M <span className="text-main">JAYRALD</span>
           </motion.h1>
 
           <motion.p
-            className="text-xl sm:text-xl lg:text-2xl text-main/90 mb-10 max-w-xl font-[Blinker] leading-relaxed text-center md:text-left"
+            className="text-xl sm:text-xl lg:text-2xl text-main/90 mb-6 max-w-xl font-[Blinker] leading-relaxed text-center md:text-left"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            A 22-year-old Fullstack Web Developer passionate about crafting
-            responsive and engaging web applications.
+            A Fullstack Web Developer from the Philippines.
           </motion.p>
 
           <motion.div
@@ -49,6 +48,14 @@ const Hero: React.FC = () => {
 
             <div className="flex items-center gap-3 mt-2 sm:mt-0 relative z-10">
               <a
+                href="https://github.com/jayraldbernales/"
+                target="_blank"
+                className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+
+              <a
                 href="https://www.linkedin.com/in/jayrald-bernales-19a8bb346/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,14 +63,6 @@ const Hero: React.FC = () => {
                 className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
               >
                 <Linkedin className="w-6 h-6" />
-              </a>
-
-              <a
-                href="https://github.com/jayraldbernales/"
-                target="_blank"
-                className="rounded-full p-2 text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
-              >
-                <Github className="w-6 h-6" />
               </a>
 
               <a

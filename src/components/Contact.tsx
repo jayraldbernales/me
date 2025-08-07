@@ -50,61 +50,61 @@ const Contact: React.FC = () => {
         <img
           src="/me/talk.png"
           alt="LET’S TALK"
-          className="w-full h-[200px] md:h-[450px] object-contain object-center"
+          className="w-full h-[150px] md:h-[450px] px-8 object-contain object-center"
         />
 
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base px-6 md:px-22">
-          <div className="blinker-bold font-semibold text-center md:text-left max-w-md">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base px-6 md:px-20 lg:px-28">
+          <div className="blinker-semibold text-center md:text-left max-w-md">
             <p className="uppercase">
               Got a question, proposal, project, or want to work together on
               something?
             </p>
             <a
               href="mailto:jayraldbernales01@gmail.com"
-              className="block mt-2 underline hover:text-accent transition duration-300"
+              className="uppercase block mt-2 underline hover:text-[#f57662] transition duration-300"
             >
               Send me an email
             </a>
           </div>
 
-          <div className="flex gap-6 text-[#e4ded7]">
+          <div className="flex gap-6 ">
             <a
               href="https://github.com/jayraldbernales"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 hover:text-accent transition" />
+              <Github className="w-5 h-5 hover:text-[#f57662] transition" />
             </a>
             <a
               href="https://www.linkedin.com/in/jayrald-bernales-19a8bb346/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="w-5 h-5 hover:text-accent transition" />
+              <Linkedin className="w-5 h-5 hover:text-[#f57662] transition" />
             </a>
             <a
               href="https://www.facebook.com/jayrald.bernales.3/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook className="w-5 h-5 hover:text-accent transition" />
+              <Facebook className="w-5 h-5 hover:text-[#f57662] transition" />
             </a>
             <a
               href="https://www.instagram.com/jayraalddd/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="w-5 h-5 hover:text-accent transition" />
+              <Instagram className="w-5 h-5 hover:text-[#f57662] transition" />
             </a>
           </div>
         </div>
       </motion.div>
 
-      <footer className="mt-10 border-t blinker-bold border-neutral-800 py-8 flex justify-between items-center text-xs px-6 md:px-27">
+      <footer className="mt-10 border-t blinker-bold border-neutral-800 py-8 flex justify-between items-center text-sm px-6 md:px-27 lg:px-34">
         <p>COPYRIGHT 2025</p>
-        <p>All rights reserved.</p>
+        <p>ALL RIGHTS RESERVED.</p>
       </footer>
-      {/* Floating Arrow Up Button (only visible when Contact is in view) */}
+
       {showArrow && (
         <motion.button
           type="button"
